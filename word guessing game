@@ -28,15 +28,15 @@ while (remainingGuesses > 0)
 
         if (!guessedLetters.Contains('_'))
         {
-            Console.WriteLine("Tebrikler, kelimeyi doğru tahmin ettiniz!");
+            Console.WriteLine("Tebrikler,kelimeyi doğru tahmin ettiniz!");
             return;
         }
     }
     else
     {
-        Console.WriteLine("Maalesef, kelime bu harfi içermiyor.");
+        Console.WriteLine("Maalesef,kelime bu harfi içermiyor.");
         remainingGuesses--;
     }
 }
 
-Console.WriteLine("Tahmin hakkınız kalmadı. Kelime: " + wordToGuess);
+Console.WriteLine("Tahmin hakkınız kalmadı.Kelime: " + wordToGuess);
