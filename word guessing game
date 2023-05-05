@@ -1,0 +1,42 @@
+string[] words = new string[] {"elma", "armut", "kiraz", "çilek", "üzüm"};
+Random random = new Random();
+string wordToGuess = words[random.Next(0, words.Length)];
+
+Console.WriteLine("Kelime tahmin oyununa hoş geldiniz!");
+Console.WriteLine("Kelime, " + wordToGuess.Length + " harf içeriyor.");
+
+int remainingGuesses = 6;
+char[] guessedLetters = new char[wordToGuess.Length];
+
+while (remainingGuesses > 0)
+{
+    Console.WriteLine("\nKalan tahmin hakkınız: " + remainingGuesses);
+    Console.WriteLine("Tahmin ettiğiniz harfler: " + new string(guessedLetters));
+
+    Console.Write("Bir harf tahmin edin: ");
+    char guess = char.Parse(Console.ReadLine());
+
+    if (wordToGuess.Contains(guess))
+    {
+        for (int i = 0; i < wordToGuess.Length; i++)
+        {
+            if (wordToGuess[i] == guess)
+            {
+                guessedLetters[i] = guess;
+            }
+        }
+
+        if (!guessedLetters.Contains('_'))
+        {
+            Console.WriteLine("Tebrikler, kelimeyi doğru tahmin ettiniz!");
+            return;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Maalesef, kelime bu harfi içermiyor.");
+        remainingGuesses--;
+    }
+}
+
+Console.WriteLine("Tahmin hakkınız kalmadı. Kelime: " + wordToGuess);
