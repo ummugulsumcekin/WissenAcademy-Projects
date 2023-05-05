@@ -1,4 +1,6 @@
 ***Rock Paper Scissors Game***
+
+
 Bu, klasik taş-kağıt-makas oyununun bir bilgisayar versiyonudur. Oyun, kullanıcının seçtiği taş, kağıt veya makasa karşı bilgisayarın seçimi ile eşleştirilir. Sonuç, seçilen öğelerin kombinasyonuna göre belirlenir. Kullanıcı ve bilgisayarın skoru kaydedilir ve oyun sonlandırıldığında kazanan bildirilir.
 
 *Başlangıç;
