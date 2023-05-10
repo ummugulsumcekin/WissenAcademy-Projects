@@ -1,7 +1,10 @@
 Determinant Calculator
+
+
 This is a C# console application that calculates the determinant of a square matrix.
 
 Usage
+
 Run the program
 Enter the size of the matrix (e.g. 3 for a 3x3 matrix)
 Enter the elements of the matrix one by one
