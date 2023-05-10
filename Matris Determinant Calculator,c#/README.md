@@ -12,6 +12,8 @@ The program will output the determinant of the matrix
 Note: The program only accepts integer input.
 
 Implementation Details
+
+
 The program uses a recursive algorithm to calculate the determinant of the matrix. If the size of the matrix is 1, the determinant is simply the value of the element in the matrix. If the size of the matrix is 2, the determinant is calculated using the formula:determinant = a11 * a22 - a12 * a21
 For larger matrices, the program recursively calculates the determinant of submatrices until it reaches a 2x2 matrix, which is then calculated using the formula above.
 
