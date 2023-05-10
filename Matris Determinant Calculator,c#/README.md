@@ -18,3 +18,4 @@ The program uses a recursive algorithm to calculate the determinant of the matri
 For larger matrices, the program recursively calculates the determinant of submatrices until it reaches a 2x2 matrix, which is then calculated using the formula above.
 
 The program also includes a function to get a submatrix by removing a specified column from the matrix. This function is used to calculate the determinant of the submatrices.
+![matrisdeterminantcalculator](https://github.com/ummugulsumcekin/WissenAcademy-Projects/assets/102469765/b843393c-159d-454d-9385-7094f3c0e961)
