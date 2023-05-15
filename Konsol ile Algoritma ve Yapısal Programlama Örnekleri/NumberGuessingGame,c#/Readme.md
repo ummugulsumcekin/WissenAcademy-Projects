@@ -17,9 +17,7 @@ Lütfen aşağıdaki zorluk seviyelerinden birisini seçiniz:
 3. Zor seviye için 3'i tuşlayın
 Doğru seçenek işaretlendikten sonra oyun başlar ve kullanıcının tahmin yapması beklenir.
 Tahmininizi yazınız: 18
-Kullanıcı sayı tahmin eder. Yapılan tahmine göre kullanıcıya bir dönüş sağlanır. Çok yakın tahminlerde
-“sıcak”, orta yakınlıktaki tahminlerde “ılık”, uzak tahminlerde ise kullanıcıya “soğuk” kelimesi ile dönüş
-yapılır.
+Kullanıcı sayı tahmin eder. Yapılan tahmine göre kullanıcıya bir dönüş sağlanır. 
 Sayı doğru tahmin edilirse ise oyun sonlanır, yanlış ise oyun devam eder ve kullanıcıdan yeni sayı
 girmesi beklenir.
 Her tahmin adımı bir değişkende sayılır. Oyun yanlış tahminlerden dolayı sonlanmaz, ancak doğru
