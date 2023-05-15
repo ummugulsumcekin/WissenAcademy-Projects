@@ -12,9 +12,9 @@ Eğer ki kullanıcı yanlış bir giriş yaparsa program kullanıcıya uyarı ve
 A
 Yanlış bir giriş yaptınız!
 Lütfen aşağıdaki zorluk seviyelerinden birisini seçiniz:
-1. Kolay seviye için 1'i tuşlayın
-2. Orta seviye için 2'i tuşlayın
-3. Zor seviye için 3'i tuşlayın
+  1. Kolay seviye için 1'i tuşlayın
+  2. Orta seviye için 2'i tuşlayın
+  3. Zor seviye için 3'i tuşlayın
 Doğru seçenek işaretlendikten sonra oyun başlar ve kullanıcının tahmin yapması beklenir.
 Tahmininizi yazınız: 18
 Kullanıcı sayı tahmin eder. Yapılan tahmine göre kullanıcıya bir dönüş sağlanır. 
