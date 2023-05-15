@@ -5,16 +5,16 @@ Lütfen aşağıdaki zorluk seviyelerinden birisini seçiniz:
 2. Orta seviye için 2'i tuşlayın
 3. Zor seviye için 3'i tuşlayın
 Seçiken zorluk seviyesine göre tahmin edilecek sayının üretilme aralığı değişkenlik gösterir.
- 1: 1 - 10 arasında
- 2: 1 - 100 arasında
- 3: 1 - 1000 arasında
+   *  1 - 10 arasında
+   *  1 - 100 arasında
+   * 1 - 1000 arasında
 Eğer ki kullanıcı yanlış bir giriş yaparsa program kullanıcıya uyarı verir ve zorluk seviyesi tekrar sorulur:
 A
 Yanlış bir giriş yaptınız!
 Lütfen aşağıdaki zorluk seviyelerinden birisini seçiniz:
-  1. Kolay seviye için 1'i tuşlayın
-  2. Orta seviye için 2'i tuşlayın
-  3. Zor seviye için 3'i tuşlayın
+    1. Kolay seviye için 1'i tuşlayın
+    2. Orta seviye için 2'i tuşlayın
+    3. Zor seviye için 3'i tuşlayın
 Doğru seçenek işaretlendikten sonra oyun başlar ve kullanıcının tahmin yapması beklenir.
 Tahmininizi yazınız: 18
 Kullanıcı sayı tahmin eder. Yapılan tahmine göre kullanıcıya bir dönüş sağlanır. 
