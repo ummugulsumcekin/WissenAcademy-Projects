@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "mbf05/qrkosKnbFGE8a68DmuiSMGZiJ7Kc5ZlnJGIITE0/KPxtIto7GYcAf/mOuoBjtezlToiujmvtRIKXKfBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\OneDrive\\Masaüstü\\kurs\\WissenAcademy-Projects\\Konsol ile Algoritma ve Yapısal Programlama Örnekleri\\PaswordHide\\PaswordHide.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
