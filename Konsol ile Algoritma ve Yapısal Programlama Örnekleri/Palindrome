@@ -1,0 +1,30 @@
+while (true) {
+  Console.Write("Bir tam sayı giriniz: ");
+  string input = Console.ReadLine();
+ if(input.ToLower() == "exit")
+   break;
+   if (!int.TryParse(input, out int number)){
+   Console.WriteLine("Lütfen doğru formatta bir sayı yazınız!");
+   continue;
+   }
+ if (IsPalindrome(number))
+                Console.WriteLine("Girdiğiniz sayı bir palindromdur.");
+            else
+                Console.WriteLine("Girdiğiniz sayı bir palindrom değildir.");
+        }
+   bool IsPalindrome(int number)
+    {
+        int originalNumber = number;
+        int reverseNumber = 0;
+
+        while (number > 0)
+        {
+            int digit = number % 10;
+            reverseNumber = reverseNumber * 10 + digit;
+            number /= 10;
+        }
+
+        return originalNumber == reverseNumber;
+    }
+
+
