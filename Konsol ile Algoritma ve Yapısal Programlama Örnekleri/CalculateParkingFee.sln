@@ -1,0 +1,92 @@
+      while (true)
+        {
+            Console.WriteLine("Araç Tipini Seçiniz:");
+            Console.WriteLine("1. Otomobil");
+            Console.WriteLine("2. Motosiklet");
+            Console.WriteLine("3. Minibüs");
+            Console.WriteLine("4. Kamyon (ve diğer ticari araçlar)");
+
+            string input = Console.ReadLine();
+            if (int.TryParse(input, out int vehicleType) && vehicleType >= 1 && vehicleType <= 4)
+            {
+                Console.WriteLine("Araç Kaç Saat Boyunca Park Alanında Kaldı?");
+                input = Console.ReadLine();
+
+                if (double.TryParse(input, out double hours) && hours >= 0)
+                {
+                    double parkingFee = CalculateParkingFee(vehicleType, hours);
+                    Console.WriteLine("Ödenmesi Gereken Tutar: " + parkingFee.ToString("C"));
+                }
+                else
+                {
+                    Console.WriteLine("Lütfen geçerli bir sayı giriniz!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Lütfen geçerli bir araç tipi seçiniz!");
+            }
+
+            Console.WriteLine();
+        }
+    
+
+  double CalculateParkingFee(int vehicleType, double hours)
+    {
+        double fee = 0;
+
+        if (vehicleType == 1) // Otomobil
+        {
+            if (hours <= 2)
+                fee = 5;
+            else if (hours <= 6)
+                fee = 10;
+            else if (hours <= 12)
+                fee = 20;
+            else if (hours <= 24)
+                fee = 35;
+            else
+                fee = 35 + 20 * Math.Ceiling((hours - 24) / 24);
+        }
+        else if (vehicleType == 2) // Motosiklet
+        {
+            if (hours <= 2)
+                fee = 0;
+            else if (hours <= 6)
+                fee = 3;
+            else if (hours <= 12)
+                fee = 6;
+            else if (hours <= 24)
+                fee = 12;
+            else
+                fee = 12 + 10 * Math.Ceiling((hours - 24) / 24);
+        }
+        else if (vehicleType == 3) // Minibüs
+        {
+            if (hours <= 2)
+                fee = 8;
+            else if (hours <= 6)
+                fee = 16;
+            else if (hours <= 12)
+                fee = 32;
+            else if (hours <= 24)
+                fee = 45;
+            else
+                fee = 45 + 25 * Math.Ceiling((hours - 24) / 24);
+        }
+        else if (vehicleType == 4) // Kamyon ve ticari araç
+        {
+            if (hours <= 2)
+                fee = 15;
+            else if (hours <= 6)
+                fee = 30;
+            else if (hours <= 12)
+                fee = 60;
+            else if (hours <= 24)
+                fee = 100;
+            else
+                fee = 100 + 55 * Math.Ceiling((hours - 24) / 24);
+        }
+
+        return fee;
+    }
