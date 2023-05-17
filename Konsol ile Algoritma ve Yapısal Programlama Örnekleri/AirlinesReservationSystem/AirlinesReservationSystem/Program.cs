@@ -1,7 +1,17 @@
 ﻿
-    string[] seats = new string[20];
+using System;
 
-    
+class Program
+{
+    static string[] seats = new string[20];
+
+    static void Main()
+    {
+        RunReservation();
+    }
+
+    static void RunReservation()
+    {
         while (true)
         {
             Console.WriteLine("1. Business Class bölümü için 1 tuşuna basın");
@@ -11,7 +21,30 @@
 
             if (choice == "1")
             {
-                MakeReservation("Business");
+                if (AreSeatsAvailable("Business"))
+                {
+                    MakeReservation("Business");
+                }
+                else
+                {
+                    Console.WriteLine("Seçtiğiniz Business Class bölümünde boş koltuk kalmamıştır.");
+                    Console.WriteLine("Economy Class bölümündeki boş koltukları görmek ister misiniz? (E/H)");
+
+                    string response = Console.ReadLine();
+
+                    if (response == "E" || response == "e")
+                    {
+                        PrintAvailableSeats("Economy");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bir sonraki uçuş kayıtları 4 saat sonradır.");
+                    }
+
+                    Console.WriteLine("Devam etmek için bir tuşa basın...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
             }
             else if (choice == "2")
             {
@@ -26,9 +59,10 @@
             Console.WriteLine("Devam etmek için bir tuşa basın...");
             Console.ReadKey();
             Console.Clear();
+        }
+    }
 
-
-    void MakeReservation(string seatClass)
+    static bool AreSeatsAvailable(string seatClass)
     {
         int startSeat, endSeat;
 
@@ -43,34 +77,56 @@
             endSeat = 19;
         }
 
-        bool seatsAvailable = false;
+        for (int i = startSeat; i <= endSeat; i++)
+        {
+            if (seats[i] == null)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static void PrintAvailableSeats(string seatClass)
+    {
+        int startSeat, endSeat;
+
+        if (seatClass == "Business")
+        {
+            startSeat = 0;
+            endSeat = 7;
+        }
+        else // Economy
+        {
+            startSeat = 8;
+            endSeat = 19;
+        }
+
+        Console.WriteLine($"Boş {seatClass} Class koltukları:");
 
         for (int i = startSeat; i <= endSeat; i++)
         {
             if (seats[i] == null)
             {
-                seatsAvailable = true;
                 Console.WriteLine($"- {i + 1}");
             }
         }
+    }
 
-        if (!seatsAvailable)
+    static void MakeReservation(string seatClass)
+    {
+        int startSeat, endSeat;
+
+        if (seatClass == "Business")
         {
-            Console.WriteLine($"Seçtiğiniz {seatClass} Class bölümünde boş koltuk kalmamıştır.");
-            Console.WriteLine("Economy Class bölümündeki boş koltukları görmek ister misiniz? (E/H)");
-
-            string response = Console.ReadLine();
-
-            if (response == "E" || response == "e")
-            {
-                MakeReservation("Economy");
-            }
-            else
-            {
-                Console.WriteLine("Bir sonraki uçuş kayıtları 4 saat sonradır.");
-            }
-
-            return;
+            startSeat = 0;
+            endSeat = 7;
+        }
+        else // Economy
+        {
+            startSeat = 8;
+            endSeat = 19;
         }
 
         Console.WriteLine($"Lütfen {seatClass} Class bölümünden bir koltuk seçin:");
@@ -109,7 +165,5 @@
 
         Console.WriteLine($"{seatClass} Class bölümündeki {selectedSeat} Numaralı koltuğu {passengerName} isimli yolcuya rezerve ettiniz.");
     }
-
-
 }
 
